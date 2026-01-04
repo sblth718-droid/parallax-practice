@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>レイヤー練習</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .scene {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .layer {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.8;
+    }
+
+    .layer.back {
+      background: #2c7be5;
+      z-index: 1;
+    }
+
+    .layer.middle {
+      background: #00d97e;
+      z-index: 2;
+    }
+
+    .layer.front {
+      background: #f6c343;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scene">
+    <div class="layer back"></div>
+    <div class="layer middle"></div>
+    <div class="layer front"></div>
+  </div>
+
+</body>
+</html>
